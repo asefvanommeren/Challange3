@@ -2,3 +2,50 @@
 	padding: 0;
 	font-family: 'Roboto', sans-serif;
 }
+body {
+	background: url("../images/space.jpeg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+
+.container {
+	display: grid;
+	height: 100vh;
+	grid-template-columns: 1fr;
+	grid-template-rows: 0.5fr 1.5fr 1.5fr 1.5fr;
+	grid-template-areas:
+	"title"
+	"map"
+	"div1"
+	"div2";
+	grid-gap: 2vh;
+}
+
+.title {
+	grid-area: title;
+	color: white;
+	text-align: center;
+}
+
+#map {
+	grid-area: map;
+	background: #fff;
+}
+
+#searchbar_plaats {
+ padding: 10px;
+ border-radius: 5px;
+ font-size: 15px;
+ background: #f8fafe;
+}
+
+#div1 {
+	grid-area: div1;
+	background: white;
+}
+
+#div2 {
+	grid-area: div2;
+	background: white;
+}

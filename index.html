@@ -4,17 +4,22 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1" />
 		<title>Challange3</title>
-		<link type="text/css" href="styles/my_style.css" rel="stylesheet" />
+		<link type="text/css" href="styles/style.css" rel="stylesheet" />
 		<script type="text/javascript" src="scripts/script.js" defer></script>
 		<!-- MAPBOX -->
 		<script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
 		<link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
-
-	</head>
+		<script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.min.js"></script>
+		<link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.css" type="text/css">
+			</head>
 	<body>
 		<div class="container">
-			<h1 class="title">Challange3</h1>
-			<div id="map" style='width: 400px; height: 300px;'></div>
+			<h1 class="title">SpaceX Interplanetary Transport System</h1>
+				<div id="map" style='width: 400px; height: 300px;'></div>
+				<div id="div1">
+					<input type=”text” id=”searchbar_plaats” name=”search” placeholder=”Voer plaats in”>
+				</div>
+				<div id="div2">Data</div>
 		</div>
 	</body>
 </html>
