@@ -23,18 +23,14 @@ map.addControl(
 //VERKRIJGEN GEOLOCATIE VAN INVOERVELD
 document.getElementsByClassName('mapboxgl-ctrl-geocoder--input')[0].onchange = function(){
   //  alert('hoi');
-  // console.log(bob.mapMarker._lngLat.lat)
-  document.getElementById('div1-data').innerHTML = Number(bob.mapMarker._lngLat.lng) + ' | ' + Number(bob.mapMarker._lngLat.lat);
-    console.log(bob.mapMarker._lngLat.lng);
-    console.log(bob.mapMarker._lngLat.lat);
+  console.log(bob.mapMarker._lngLat);
+
+  // document.getElementById('div1-data').innerHTML = Number(bob.mapMarker._lngLat.lng) + ' | ' + Number(bob.mapMarker._lngLat.lat);
+  //   console.log(bob.mapMarker._lngLat.lng);
+  //   console.log(bob.mapMarker._lngLat.lat);
 };
 
-curl --request GET \
-  --url 'https://us1.locationiq.com/v1/search.php?key=pk.816a66c0ae3227c32520a175a0ad949d&q=country&format=json'
-
-
-
-
+GET /geocoding/v5/mapbox.places-permanent/bob.mapMarker._lngLat.lng,bob.mapMarker._lngLat.lat.json
 
 // var ll =
 //   map.on('click', function (e) {
