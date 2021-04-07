@@ -8,6 +8,8 @@ var map = new mapboxgl.Map({
   zoom: 5
 });
 
+
+// MAPBOX ZOEKVELD
 var bob = new MapboxGeocoder({
   accessToken: mapboxgl.accessToken,
   mapboxgl: mapboxgl
@@ -17,15 +19,8 @@ map.addControl(
   bob
 );
 
-// var ll =
-//   map.on('click', function (e) {
-//   document.getElementById('div1').innerHTML =
-//     // e.lngLat is the longitude, latitude geographical position of the event
-//     // JSON.stringify(e.lngLat.wrap());
-//     JSON.stringify(e.lngLat.wrap());
-//     //console.log(e.lngLat.lat);
-// });
 
+//VERKRIJGEN GEOLOCATIE VAN INVOERVELD
 document.getElementsByClassName('mapboxgl-ctrl-geocoder--input')[0].onchange = function(){
   //  alert('hoi');
   // console.log(bob.mapMarker._lngLat.lat)
@@ -34,7 +29,21 @@ document.getElementsByClassName('mapboxgl-ctrl-geocoder--input')[0].onchange = f
     console.log(bob.mapMarker._lngLat.lat);
 };
 
+curl --request GET \
+  --url 'https://us1.locationiq.com/v1/search.php?key=pk.816a66c0ae3227c32520a175a0ad949d&q=country&format=json'
 
+
+
+
+
+// var ll =
+//   map.on('click', function (e) {
+//   document.getElementById('div1').innerHTML =
+//     // e.lngLat is the longitude, latitude geographical position of the event
+//     // JSON.stringify(e.lngLat.wrap());
+//     JSON.stringify(e.lngLat.wrap());
+//     //console.log(e.lngLat.lat);
+// });
 
 //
 // var locatie = new mapboxgl.GeolocateControl();
