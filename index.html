@@ -5,25 +5,59 @@
 		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1" />
 		<title>Challange3</title>
 		<link type="text/css" href="styles/style.css" rel="stylesheet" />
-		<script type="text/javascript" src="scripts/script.js" defer></script>
+		<script type="text/javascript" src="scripts/script2.js" defer></script>
+
 		<!-- MAPBOX -->
-		<script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
+		<!-- <script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
 		<link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
+		<script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.min.js"></script>
+		<link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.css" />
 		<script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.min.js"></script>
-		<link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.css" type="text/css">
-			</head>
+		<link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.css" type="text/css"> -->
+
+		<script src="https://api.mapbox.com/mapbox-gl-js/v1.9.0/mapbox-gl.js"></script>
+		<link href="https://api.mapbox.com/mapbox-gl-js/v1.9.0/mapbox-gl.css" rel="stylesheet" />
+
+		<!-- Geocoder assets -->
+		<script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.min.js"></script>
+		<link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.css" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	 </head>
+
+
 	<body>
+
+		<script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.min.js"></script>
+		<link rel="stylesheet"
+			href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.css"
+			type="text/css">
+		<!-- Promise polyfill script required to use Mapbox GL Geocoder in IE 11 -->
+		<script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
+
 		<div class="container">
 			<h1 class="title">SpaceX Interplanetary Transport System</h1>
-				<div id="map" style='width: 400px; height: 300px;'></div>
+				<div id="map" style='width: 400px; height: 400px;'></div>
 				<div id="div1">
-					<h2>Koptitel</h2>
-					<div id="div1-data">Data</div>
+					<h2>Zoek hier uw stad</h2>
+					<div id="div1-block">
+						<div id="geocoder"></div>
+						<div id="map" class="map"></div>
+						<!-- <article id="div1-data" class="div1-data">&#176;C</article> -->
+					</div>
 				</div>
 				<div id="div2">
-					<h2>Koptitel</h2>
-					<div id="div2-data">Data</div>
-				</div>
+					<h2>Stadsnaam</h2>
+					<div id="landnaam" class="landnaam">Zoek eerst naar een stad!</div>
+        </div>
+				<div id="div3">
+					<h2>Gemiddelde temperatuur in de stad</h2>
+					<article id="temperatuur" class="temperatuur">Stad niet bekend</article>
+        </div>
+				<div id="div4">
+					<h2>Laatste NASA foto</h2>
+					<thing id="img"></thing>
+        </div>
 		</div>
 	</body>
 </html>
